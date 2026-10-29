@@ -1,9 +1,14 @@
-# Samsung Galaxy Note9 (crownlte) diagnostics
+# Galaxy Note9 / crownlte diagnostic files
 
-This branch holds source and download instructions for experimental Windows-on-ARM audio diagnostics on Exynos9810 / SM-N960N.
+This branch is reserved for experimental Exynos9810 Windows-on-ARM audio diagnostics. It does **not** contain the binary downloads yet.
 
-**Unverified hardware:** SYSMMU translation is disabled; this is not a working audio driver or a newly compiled UEFI image. The bootable UEFI image previously supplied is an existing build and does not contain the latest SYSMMU ACPI changes.
+Files to upload from the earlier ChatGPT session:
 
-The diagnostic driver is **source**, requiring ARM64 Windows Driver Kit build and device-side testing.
+- `Note9_Diagnostics_20261029.zip` — complete archive: `uefi-existing.img`, `CrownlteAudio-diagnostics-source.zip`, `UEFI-SYSMMU-source.zip`.
+- `Note9_Driver_Source_20261029.zip` — standalone driver source.
 
-Files are placed on this separate branch rather than changing `main`.
+These files exist in the ChatGPT working environment, but the available GitHub integration cannot directly import local binary files from that environment. **Do not treat this branch as a usable download until the archives are actually uploaded.**
+
+The UEFI image is an existing build, not rebuilt with the newest SYSMMU ACPI resource. The diagnostic driver is source only, not a compiled `.sys` file. SYSMMU translation remains disabled and hardware operation is unverified.
+
+Suggested upload destination: a GitHub Release under this repository, which preserves the macOS project main branch and supports binary release assets.
